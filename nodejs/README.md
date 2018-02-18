@@ -1,2 +1,2 @@
-# migrationlabs
-A series of hands on labs around migration and modernization
+# NodeJs and Mongo DB on Azure #
+
