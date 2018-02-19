@@ -7,7 +7,7 @@ var fs = require('fs'),
     var mongoClient = require("mongodb").MongoClient;
 
     // This is the format of the configuration file (case sensitive)
-    var settings = {
+    var _settings = {
         "ConnectionString" : "",
         "Database" : "",
         "Collection" : ""
@@ -17,12 +17,14 @@ var fs = require('fs'),
     fs.readFile(filename, 'utf8', function (err, data) { 
         if(err) throw err;
 
-        settings = JSON.parse(data);
+        _settings = JSON.parse(data);
         
-        console.log(settings.ConnectionString);
-        console.log(settings.Database);
-        console.log(settings.Collection);
+        console.log(_settings.ConnectionString);
+        console.log(_settings.Database);
+        console.log(_settings.Collection);
         
+        global.settings = _settings;
+
         setupMongo();
     });
 
@@ -77,35 +79,35 @@ var setupMongo = function() {
       console.log('Current DB: ' + db.databaseName);
 
       // if there are no records read the data/ folder and make some
-      if(!anyRecords(db)) {
-        const testFolder = path.join(__dirname, 'data');
-        fs.readdirSync(testFolder).forEach(filename => {
-          filename = path.join(testFolder,filename);
-          console.log(filename);
-          try {
-            var data = fs.readFileSync(filename, 'utf8');
-            var json = JSON.parse(data);
-            db.collection(settings.Collection).insert(json);
-          } catch(e) {
-            Console.log(e.message);
-          }
-        })
-      }
+      anyRecords(db,makeMongoTestData); 
 
       db.close();
   });
 }
 
-var anyRecords = function(db) {
-    var flag = false;
+var makeMongoTestData = function(db) {
+  const testFolder = path.join(__dirname, 'data');
+  fs.readdirSync(testFolder).forEach(filename => {
+    filename = path.join(testFolder,filename);
+    console.log(filename);
+    try {
+      var data = fs.readFileSync(filename, 'utf8');
+      var json = JSON.parse(data);
+      db.collection(settings.Collection).insert(json);
+    } catch(e) {
+      Console.log(e.message);
+    }
+  });
+}
+
+var anyRecords = function(db, callback) {
     db.collection(settings.Collection).find().toArray(function(err, items) {
         if(err) throw err;
         if(items) {
-          if(items.length > 0) {
-            flag = true;
+          if(items.length <= 0) {
+            callback(db);
           }
         }
-    });
-    return flag;
+      });
   };
 
