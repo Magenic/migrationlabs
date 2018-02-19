@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-people-api",
+  "version": "1.0.2",
+  "description": "Demo of Swagger 1st NodeJS API w. Azure CosmosDB in Mongo API mode",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "swagger",
+    "mongo",
+    "cosmos",
+    "node",
+    "azure"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "connect": "^3.2.0",
+    "js-yaml": "^3.3.0",
+    "swagger-tools": "0.10.1",
+    "mongodb": "^2.2.31"
+  },
+  "author": "Stuart Williams"
+}
