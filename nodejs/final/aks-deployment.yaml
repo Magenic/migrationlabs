@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: people-service
-        image: ./people-service
+        image: {your registry url}/people-service
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

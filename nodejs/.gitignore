@@ -1,1 +1,4 @@
 settings.json
+.editorconfig
+.vscode
+node_modules

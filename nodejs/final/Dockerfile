@@ -4,7 +4,7 @@
 ############################################################
 FROM node:latest
 
-LABEL Author="Stuart Williams <stuartw@magenic.com>"
+LABEL Author="You <you@wherever.ext>"
 LABEL Version="1.4"
 
 # Variables
