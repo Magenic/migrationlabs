@@ -1,0 +1,47 @@
+﻿@model IEnumerable<PicShare_GCPDemo.Models.Picture>
+
+@{
+    ViewData["Title"] = "DbTest";
+}
+
+<h2>DbTest</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FilePath)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Caption)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AddedDate)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Caption)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddedDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PictureId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PictureId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PictureId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
