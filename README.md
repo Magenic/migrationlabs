@@ -7,9 +7,9 @@ This repository contains:
     * [PPTX] <a href="Migration-Modernization.pdf" target="_blank">PowerPoint Format</a>
     * [PDF] <a href="Migration-Modernization.pdf" target="_blank">PDF Format</a>
 * A series of lab folders each containing one or more projects you can modernize and migrate
-    * [Azure IaaS](paas\README.md) (.NET Core)
-    * [Azure Kubernetes](nodejs\README.md) (NodeJS)
-    * [Azure PCF](pcf\README.md) 
+    * <a href="paas\README.md" target="_blank">Azure IaaS</a>
+    * <a href="nodejs\README.md" target="_blank">Azure Kubernetes</a>
+    * <a href="pcf\README.md" target="_blank">Azure PCF</a>
 
 ## Prerequisites ##
 
