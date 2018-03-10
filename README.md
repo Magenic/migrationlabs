@@ -10,6 +10,12 @@ This repository contains:
     * <a href="nodejs\README.md" target="_blank">Azure NodeJs + CosmosDB</a> 
     * <a href="pcf\README.md" target="_blank">Azure PCF Migration</a> 
 
+## Prerequisites ##
+
+1. An Azure Account, if you don't have one, sign up for free: <a href="https://azure.microsoft.com/en-us/free/" target="_blank">Sign up for Azure</a>
+2. GIT (source control client) for your O/S <a href="https://git-scm.com/downloads" target="_blank">Download GIT</a>
+3. Compilers and tools for the demos you want to do, see the individual lab documentation
+
 ## Authors ##
 
 * Stuart Williams
