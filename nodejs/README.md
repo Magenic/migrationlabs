@@ -1,54 +1,21 @@
 # NodeJs and Mongo DB (in Cosmos) on Azure Kubernetes (K8s) Service (AKS) #
 
-## Before you come ##
+## Consider before you come ##
 
-1. Please sign up for an azure subscription (a free one is ok) <https://azure.microsoft.com/en-us/free/> 
-2. Download and install the tools (see below)
-3. Consider making in advance
+1. Consider making in advance
     * an AKS instance
     * a Image Repository instance
     * Consider making an CosmosDB (with a MongoDB API)
-4. Look over the lab
+2. Look over the lab
 
-## Tools you will need ##
+## Node Lab Specific Tools ##
 
 * NodeJS <https://nodejs.org/en/download/> use the LTS version
-* GIT (for windows +BASH) <https://git-scm.com/downloads>
 * Docker <https://www.docker.com/get-docker>
 * Kubernetes Tools <https://kubernetes.io/docs/tasks/tools/install-kubectl/>
-* Azure CLI <https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest>
-* *(optionally)* Visual Studio or Visual Studio Code (or your favorite editor for Node) <https://code.visualstudio.com/download>
 * *(optionally)* MongoDB Compass <https://www.mongodb.com/download-center#compass>
 
-### Azure CLI in BASH Notes ###
-
-Unfortunately, **BASH** hates paths with spaces and parenthesis, so the CLI location of 
-```DOS
-C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2
-```
-Is terrible. Here is what I do, I copy the 'Azure' folder and all sub-folders to my `C:\` drive (root) e.g.
-
-```DOS
-C:\CLI2\
-```
-
-And then from BASH when ever I need to execute an azure command instead of the command you would execute from DOS/Visual-Studio-Command-Line
-```DOS
-AZ.cmd {arguments}
-```
-We would use this
-```bash
-/C/CLI2/python.exe -Im azure.cli {arguments}
-```
-Or better yet, make an alias so you have it anytime
-```bash
-alias az='/C/CLI2/python.exe -Im azure.cli $*'
-```
-Which you could put in your `~/.bashrc`
-
-> In this document we will assume you have done this and that `az` will do the right think on your machine
-
-# Setup #
+## Setup ##
 
 1. Login to Azure Portal
 2. Make an AKS instance *(See below)*
@@ -61,8 +28,7 @@ Which you could put in your `~/.bashrc`
     * Download your K8s Credentials
 7. Once you are up and ready, you can cd into the **Final** folder and do the lab *(see below)*
 
-
-### Logging into Azure ###
+## Logging into Azure ##
 
 ```bash
 az login
@@ -77,7 +43,7 @@ account set --subscription $sub
 ```
 Where `$sub` is the GUID of your subscription of choice
 
-### Logging into Your Repository ###
+## Logging into Your Repository ##
 
 To login to your registry have your creds at hand and
 ```bash
@@ -85,7 +51,7 @@ winpty docker login $repo-url
 ```
 where `$repo-url` is the URL of your repo from the Azure portal, you will be prompted for the user (by default the name of your repository instance), and the password.
 
-### Download your K8s Credentials ###
+## Download your K8s Credentials ##
 
 To integrate your Azure Kubernetes details into your `kubectl` configuration you need only
 
