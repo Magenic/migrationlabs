@@ -6,7 +6,6 @@ This repository contains:
 * A PowerPoint Introduction To Migration and Modernization
 * A series of lab folders each containing one or more projects you can modernize and migrate
     * <a href="iaas\README.md" target="_blank">Azure IaaS</a> 
-    * <a href="java\README.md" target="_blank">Azure Java</a> 
     * <a href="nodejs\README.md" target="_blank">Azure NodeJs + CosmosDB</a> 
     * <a href="pcf\README.md" target="_blank">Azure PCF Migration</a> 
 
@@ -33,6 +32,3 @@ This repository contains:
     * <RamonaM@magenic.com>
     * Lead Consultant
 
-* Jason Chaffee 
-    * <JasonC@magenic.com>
-    * Java Architect
