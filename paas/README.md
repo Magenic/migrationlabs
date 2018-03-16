@@ -23,7 +23,7 @@ You'll notice that this base version of the application stores images to the loc
 2. Click the '+' at the top of the page to add a new storage account and specify a name for your storage account.
 3. Configure the storage options per the screenshots below
 
-![](/readme_images/BlobConfig1.png)
+![](readme_images/BlobConfig1.PNG)
 ![](/readme_images/BlobConfig2.png)
 
 4. Click Create and Azure will spin up your new storage account
