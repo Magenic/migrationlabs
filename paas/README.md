@@ -1,8 +1,20 @@
-# Azure IaaS #
+# Azure PaaS #
 
 ## PicShare Demo Application Overview ##
 
-** Add instructions for building, running, and exploring the app**
+Within this folder you will find a solution for the demo application we will be working with.
+
+    paas\PicShare_AzureDemo.sln
+
+Go ahead and open that in your favorite IDE and ensure you can build and run the application.  You should see a basic photo sharing application that will allow you to upload an image and specify a caption.
+
+*Note: The slideshow functionality has not been implemented and will not be used.*
+
+Let's take a quick look at the code to understand what we are working with.
+
+Under the `Controllers` folder you will see that we have `HomeController.cs` and `PicturesController.cs`.  `HomeController` is a basic controller to display the web view, so there is not much to see there.  `PicturesController` is a Web API controller that handles the logic for displaying and saving pictures.  Take a look through the code to understand what's going on.
+
+You'll notice that this base version of the application stores images to the local file system and leverages a local SQL Server database.  In this lab, we'll move components of the application to Azure piece by piece to both get experience with the various offerings as well as see how doing this allows each component to scale as needed.
 
 # Azure BLOB Storage #
 
@@ -11,19 +23,19 @@
 2. Click the '+' at the top of the page to add a new storage account and specify a name for your storage account.
 3. Configure the storage options per the screenshots below
 
-![](/readme_images/BlobConfig1.png)
-![](/readme_images/BlobConfig2.png)
+![](readme_images/BlobConfig1.png)
+![](readme_images/BlobConfig2.png)
 
 4. Click Create and Azure will spin up your new storage account
 5. Once the account is created, you should be taken to the new account page.  If not, you can navigate back to it through "Storage accounts" and clicking on the name of your newly created account.
 6. In the storage account navigation on the left, click Containers
 
-![](/readme_images/containers.png)
+![](readme_images/containers.png)
 
 7. At the top of the page, click "+ Container" to create a new container.
 8. Specify a name of your choosing and select "Blob..." for the public access level as shown below and click "OK"
 
-![](/readme_images/NewContainer.png)
+![](readme_images/NewContainer.png)
 
 Congratulations, you have successfully setup a storage account and container for our site images.  Next, let's update our app to take advantage of it!
 
@@ -55,7 +67,7 @@ Congratulations, you have successfully setup a storage account and container for
 10. We need to add NuGet packages in order to work with Azure Storage.  Right-click on the project and select "Manage NuGet Packages..."
 11. Search for "azure storage" and install the result shown below
 
-![](/readme_images/StorageNuGet.png)
+![](readme_images/StorageNuGet.png)
 
 12. Open `PicturesController` from the `Controllers` folder.
 13. Add 2 new field to the class, one to store the configuration information and the other to provide a reference to your container.
@@ -122,11 +134,11 @@ Next, let's eliminate the need to patch and manage our SQL Server by migrating t
 ## Creating the Database
 
 1. From your Azure Portal, click to create a new resource in the top left.
-![](/readme_images/AddResource.png)
+![](readme_images/AddResource.png)
 2. Select Databases, then SQL Database
-![](/readme_images/CreateDatabase.png)
+![](readme_images/CreateDatabase.png)
 3. Give your database a name, choose the subscription, and add it to the Resource Group you created for the blob store.  Create a new server if needed and select a Basic pricing tier.  Then click Create.
-![](/readme_images/DBConfig.png)
+![](readme_images/DBConfig.png)
 4. Once the database creation is complete, click into it to view details.  
 5. At the top of the page, click Set server firewall
 6. Click "Add client IP" to add your current IP to the firewall and click Save
@@ -154,14 +166,14 @@ For the final step, we'll move the site itself into App Services to provide mana
 6. Click Create to generate your new App Service site.
 7. Once your new service is created, click into it to view the details.
 8. Download the publish profile so you can deploy your app.
-![](/readme_images/PublishProfile.png)
+![](readme_images/PublishProfile.png)
 
 ## Deploy the App ##
 1. Back in the Visual Studio solution, select Build - Publish...
 2. Click the link to create a new profile
 3. Select Import and browse to the publish profile you downloaded
 4. Before publishing, click Settings to view the publish configuration and click validate connection to ensure everything is working
-![](/readme_images/validateConnection.png)
+![](readme_images/validateConnection.png)
 5. Click Next and under Databases, check the box to use the connection string configured in App Settings.
 5. Click Save
 6. Click Publish to push your site to Azure
@@ -169,7 +181,7 @@ For the final step, we'll move the site itself into App Services to provide mana
 ## Validate Deployment ##
 1. Back in the Azure portal, still in the details for your App Service, click on the URL to open your live site.  You should see the existing images that you uploaded previously.  Upload another image to verify everything works.
 2. Back in the portal, scroll down in the left App Service navigation and under Settings you'll notice your scaling options.
-![](/readme_images/scale.png)
+![](readme_images/scale.png)
 3. Scale up will allow you to change the plan to a larger instance
 4. Scale out will allow you to spin up additional instances
 5. If you change to a higher level plan (standard or higher) you can configure Autoscale to dynamically adjust the number of instances to meet demands!

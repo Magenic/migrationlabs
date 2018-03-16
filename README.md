@@ -7,7 +7,7 @@ This repository contains:
     * [PPTX] <a href="Migration-Modernization.pdf" target="_blank">PowerPoint Format</a>
     * [PDF] <a href="Migration-Modernization.pdf" target="_blank">PDF Format</a>
 * A series of lab folders each containing one or more projects you can modernize and migrate
-    * <a href="paas\README.md" target="_blank">Azure IaaS</a>
+    * <a href="paas\README.md" target="_blank">Azure PaaS</a>
     * <a href="nodejs\README.md" target="_blank">Azure Kubernetes</a>
     * <a href="pcf\README.md" target="_blank">Azure PCF</a>
 
@@ -20,9 +20,9 @@ This repository contains:
 4. Your favorite editor for Code. 
 * Visual Studio Code is free: <https://code.visualstudio.com/download>
 
-### Azure CLI in BASH Notes ###
+### Azure CLI in BASH on Windows Notes ###
 
-Unfortunately, **BASH** hates paths with spaces and parenthesis, so the CLI location of 
+Unfortunately, **BASH** on Windows hates paths with spaces and parenthesis, so the CLI location of 
 ```DOS
 C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2
 ```
@@ -32,7 +32,7 @@ Is terrible. Here is what I do, I copy the 'Azure' folder and all sub-folders to
 C:\CLI2\
 ```
 
-And then from BASH when ever I need to execute an azure command instead of the command you would execute from DOS/Visual-Studio-Command-Line
+And then from BASH when ever I need to execute an Azure command instead of the command you would execute from DOS/Visual-Studio-Command-Line
 ```DOS
 AZ.cmd {arguments}
 ```
@@ -46,7 +46,7 @@ alias az='/C/CLI2/python.exe -Im azure.cli $*'
 ```
 Which you could put in your `~/.bashrc`
 
-> In this document we will assume you have done this and that `az` will do the right think on your machine
+> In this document we will assume you have done this and that `az` will do the right thing on your machine
 
 
 ## Authors ##
@@ -61,6 +61,9 @@ Which you could put in your `~/.bashrc`
 * Chris Plowman 
     * <ChrisP@magenic.com>
     * Client Solutions Manager, San Francisco, CA
+    * Blog: https://chrispycode.ninja/
+    * LinkedIn: https://www.linkedin.com/in/chrispy2day/
+    * GitHub: https://github.com/chrispy2day
 
 * Ramona Maxwell 
     * <RamonaM@magenic.com>
