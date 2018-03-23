@@ -14,7 +14,7 @@ Let's take a quick look at the code to understand what we are working with.
 
 Under the `Controllers` folder you will see that we have `HomeController.cs` and `PicturesController.cs`.  `HomeController` is a basic controller to display the web view, so there is not much to see there.  `PicturesController` is a Web API controller that handles the logic for displaying and saving pictures.  Take a look through the code to understand what's going on.
 
-You'll notice that this base version of the application stores images to the local file system and leverages a local SQL Server database.  In this lab, we'll move components of the application to Azure piece by piece to both get experience with the various offerings as well as see how doing this allows each component to scale as needed.
+You'll notice that this base version of the application stores images to the local file system and leverages a local SQL Server database.  In this lab, we'll move components of the application to Azure piece by piece to both get experience with the various offerings as well as see how doing this allows each component to scale independently, resulting in a more flexible solution.
 
 # Azure BLOB Storage #
 
