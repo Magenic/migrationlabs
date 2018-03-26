@@ -67,5 +67,5 @@ Which you could put in your `~/.bashrc`
 
 * Ramona Maxwell 
     * <RamonaM@magenic.com>
-    * Lead Consultant
+    * Lead Consultant, San Francisco, CA
 

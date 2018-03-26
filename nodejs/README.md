@@ -5,7 +5,7 @@
 1. Consider making in advance
     * an AKS instance
     * a Image Repository instance
-    * Consider making an CosmosDB (with a MongoDB API)
+    * Consider making a CosmosDB (with a MongoDB API)
 2. Look over the lab
 
 ## Node Lab Specific Tools ##
@@ -73,11 +73,11 @@ Follow the steps in this video:
 
 <a href="https://www.youtube.com/watch?v=OdigLuK09NE" target="_blank">https://www.youtube.com/watch?v=OdigLuK09NE</a>
 
-## Making a Azure Container Repository ##
+## Making a Azure Container Registry ##
 
-1. Go the marketplace and search for 'Container Repository'
+1. Go the marketplace and search for 'Container Registry'
 2. Click add...
-3. Give your repository a name and a resource group (not the same RG as your K8s instance is in) ideally in the same data-center as the other Azure resources you are making (use region 'West US' if possible)
+3. Give your registry a name and a resource group (not the same RG as your K8s instance is in) ideally in the same data-center as the other Azure resources you are making (use region 'West US' if possible)
 4. Grab 3 values
     * Name: `{your registry name}`
     * URL: `{your registry name}.azurecr.io`
@@ -110,7 +110,7 @@ Follow the steps in this video:
     * Resource Group
     * Instance name
 
-3. Your Repository Credentials
+3. Your Registry Credentials
     * Name: `{your registry name}`
     * URL: `{your registry name}.azurecr.io` (or whatever it says)
     * Password (from `Access Keys` page)
