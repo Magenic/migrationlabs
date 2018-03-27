@@ -9,7 +9,7 @@ This repository contains:
 * A series of lab folders each containing one or more projects you can modernize and migrate
     * <a href="paas\README.md" target="_blank">Azure PaaS</a>
     * <a href="nodejs\README.md" target="_blank">Azure Kubernetes</a>
-    * <a href="pcf\README.md" target="_blank">Azure PCF</a>
+    * <a href="/pcf/PCF%20Deployment%20Demo.md" target="_blank">Azure PCF</a>
 
 ## Prerequisites ##
 
