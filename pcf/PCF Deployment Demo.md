@@ -88,7 +88,7 @@ To compare the experience of using a deployment framework, one of the applicatio
 
 - Sample App
   - You can use any of the sample apps provided, or one of your own to test. Apps are available at the following repos:
-    - [SteelToeSolver on GitHub - .Net Core](https://github.com/sqlsolver/steeltoesolver.git)  
+    - [SteelToeSolver on GitHub - .Net Core](https://github.com/sqlsolver/kkj.git)  
     - [Sample Apps on Cloud Foundry](https://github.com/cloudfoundry-samples)  
 - Prepare
   - [Service Instances](https://docs.pivotal.io/pivotalcf/2-0/devguide/services/managing-services.html)  
