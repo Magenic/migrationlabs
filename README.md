@@ -49,6 +49,9 @@ Which you could put in your `~/.bashrc`
 > In this document we will assume you have done this and that `az` will do the right thing on your machine
 
 
+## Magenic ##
+This <a href="MagenicOverview.pdf">PDF</a> will give you an overview of Magenic and how we can help you get your digital products to market faster.
+
 ## Authors ##
 
 * Stuart Williams
