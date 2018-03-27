@@ -6,7 +6,7 @@ Within this folder you will find a solution for the demo application we will be 
 
     paas\PicShare_AzureDemo.sln
 
-Go ahead and open that in your favorite IDE and ensure you can build and run the application.  You should see a basic photo sharing application that will allow you to upload an image and specify a caption.
+Go ahead and open that in Visual Studio and ensure you can build and run the application.  This is a .NET Core 2 app, so ensure you have the necessary [.NET Core SDK](https://www.microsoft.com/net/download/windows) installed.  You should see a basic photo sharing application that will allow you to upload an image and specify a caption.
 
 *Note: The slideshow functionality has not been implemented and will not be used.*
 
