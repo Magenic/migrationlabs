@@ -15,6 +15,13 @@
 * Kubernetes Tools <https://kubernetes.io/docs/tasks/tools/install-kubectl/>
 * *(optionally)* MongoDB Compass <https://www.mongodb.com/download-center#compass>
 
+## SSH ##
+
+* Win <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows" target="_blank">https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows</a> 
+
+* Mac / Linux <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys" target="_blank">https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys</a>
+
+
 ## Setup ##
 
 1. Login to Azure Portal
@@ -39,7 +46,7 @@ And then log you into Azure, and list your subscriptions
 **Note:** If you have multiple subscriptions set the one your labs stuff is in explicitly to avoid misery
 
 ```bash
-account set --subscription $sub
+az account set --subscription $sub
 ```
 Where `$sub` is the GUID of your subscription of choice
 
@@ -73,6 +80,11 @@ Follow the steps in this video:
 
 <a href="https://www.youtube.com/watch?v=OdigLuK09NE" target="_blank">https://www.youtube.com/watch?v=OdigLuK09NE</a>
 
+-or-
+
+Making a Kuberetes Instance on Azure
+can also reference this: <a href="https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough" target="_blank">https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough</a>
+
 ## Making a Azure Container Registry ##
 
 1. Go the marketplace and search for 'Container Registry'
@@ -95,6 +107,7 @@ Follow the steps in this video:
 6. Goto the connection string blade, and copy your connection string
 7. Keep these 3 settings handy, you will need them later
  
+
 # The Lab #
 
 ## What you will need from Azure ##
