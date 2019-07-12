@@ -17,9 +17,9 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "connect": "^3.6.6",
+    "connect": "^3.7.0",
     "js-yaml": "^3.13.1",
-    "mongodb": "^2.2.31",
+    "mongodb": "^3.2.7",
     "swagger-tools": "^0.10.4"
   },
   "author": "Stuart Williams"
