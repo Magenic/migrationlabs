@@ -20,7 +20,8 @@
     "connect": "^3.7.0",
     "js-yaml": "^3.13.1",
     "mongodb": "^3.2.7",
-    "swagger-tools": "^0.10.4"
+    "swagger-tools": "^0.10.4",
+    "lodash": ">=4.17.14"
   },
   "author": "Stuart Williams"
 }
