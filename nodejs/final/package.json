@@ -21,7 +21,7 @@
     "js-yaml": "^3.13.1",
     "mongodb": "^3.2.7",
     "swagger-tools": "^0.10.4",
-    "lodash": ">=4.17.14"
+    "lodash": ">=4.17.19"
   },
   "author": "Stuart Williams"
 }
